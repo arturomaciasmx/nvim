@@ -1,4 +1,5 @@
 vim.cmd("let g:netrw_liststyle = 3")
+vim.g.lazyvim_check_order = false
 
 local opt = vim.opt -- for conciseness
 
