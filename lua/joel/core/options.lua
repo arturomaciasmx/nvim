@@ -1,6 +1,8 @@
 vim.cmd("let g:netrw_liststyle = 3")
 vim.g.lazyvim_check_order = false
 
+vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
+
 local opt = vim.opt -- for conciseness
 
 -- line numbers
