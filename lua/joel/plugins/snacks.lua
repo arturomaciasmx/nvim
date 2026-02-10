@@ -1,24 +1,24 @@
 return {
-{
-  "folke/snacks.nvim",
-  priority = 1000,
-  lazy = false,
-  opts = {
-    bufdelete = { enabled = true },
-    indent = { enabled = true },
-    input = { enabled = true },
-    notifier = { enabled = true },
-    scope = { enabled = true },
-    scroll = { enabled = true },
-    statuscolumn = { enabled = false }, -- we set this in options.lua
-    toggle = {},
-    words = { enabled = true },
-    dashboard = {
-     preset = {
-       pick = function(cmd, opts)
-         return LazyVim.pick(cmd, opts)()
-       end,
-       header = [[
+	{
+		"folke/snacks.nvim",
+		priority = 1000,
+		lazy = false,
+		opts = {
+			bufdelete = { enabled = true },
+			indent = { enabled = true },
+			input = { enabled = true },
+			notifier = { enabled = true },
+			scope = { enabled = true },
+			scroll = { enabled = true },
+			statuscolumn = { enabled = false }, -- we set this in options.lua
+			toggle = {},
+			words = { enabled = true },
+			dashboard = {
+				preset = {
+					pick = function(cmd, opts)
+						return LazyVim.pick(cmd, opts)()
+					end,
+					header = [[
        ██╗      █████╗ ███████╗██╗   ██╗██╗   ██╗██╗███╗   ███╗          Z
        ██║     ██╔══██╗╚══███╔╝╚██╗ ██╔╝██║   ██║██║████╗ ████║      Z    
        ██║     ███████║  ███╔╝  ╚████╔╝ ██║   ██║██║██╔████╔██║   z       
@@ -27,7 +27,6 @@ return {
        ╚══════╝╚═╝  ╚═╝╚══════╝   ╚═╝     ╚═══╝  ╚═╝╚═╝     ╚═╝           
 ]],
        -- stylua: ignore
-       ---@type snacks.dashboard.Item[]
        keys = {
          { icon = " ", key = "f", desc = "Find File", action = ":lua Snacks.dashboard.pick('files')" },
          { icon = " ", key = "n", desc = "New File", action = ":ene | startinsert" },
@@ -39,9 +38,9 @@ return {
          { icon = "󰒲 ", key = "l", desc = "Lazy", action = ":Lazy" },
          { icon = " ", key = "q", desc = "Quit", action = ":qa" },
        },
-     },
-   },
-  },
+				},
+			},
+		},
   -- stylua: ignore
   keys = {
     { "<leader>n", function()
@@ -53,5 +52,5 @@ return {
     end, desc = "Notification History" },
     { "<leader>un", function() Snacks.notifier.hide() end, desc = "Dismiss All Notifications" },
   },
-}
+	},
 }
