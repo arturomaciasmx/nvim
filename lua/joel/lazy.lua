@@ -1,4 +1,3 @@
-
 -- 1. Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
@@ -10,21 +9,22 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
   spec = {
     -- LOAD THE ENGINE ONLY (provides the 'LazyVim' global variable)
-    { 
-      "LazyVim/LazyVim", 
-      priority = 10000, 
-      lazy = false, 
-      config = true, 
+    {
+      "LazyVim/LazyVim",
+      priority = 10000,
+      lazy = false,
+      config = true,
       opts = {
-defaults = {
+        defaults = {
           autocmds = true, -- Set to false if you want zero defaults
-          keymaps = false,  -- THIS FIXES YOUR ERROR
+          keymaps = false, -- THIS FIXES YOUR ERROR
           options = true,
         },
-      } 
+      }
     },
-    
+
     -- IMPORT YOUR STUFF (from lua/plugins/ folder)
     { import = "joel.plugins" },
   },
 })
+vim.treesitter.language.register("liquid", "liquid")

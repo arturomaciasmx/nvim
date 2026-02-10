@@ -120,6 +120,13 @@ return {
               },
             },
           },
+          cssls = {
+            -- This forces the CSS LSP to initialize on liquid files
+            filetypes = { "css", "scss", "less", "liquid" },
+            settings = {
+              css = { validate = true },
+            },
+          },
           stylua = { enabled = false },
           lua_ls = {
             -- mason = false, -- set to false if you don't want this server to be installed with mason
