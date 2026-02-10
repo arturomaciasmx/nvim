@@ -145,6 +145,9 @@ return {
 								workspace = {
 									checkThirdParty = false,
 								},
+								diagnostics = {
+									globals = { "vim", "LazyVim", "Snacks" },
+								},
 								codeLens = {
 									enable = true,
 								},
