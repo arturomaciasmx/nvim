@@ -7,6 +7,13 @@ return {
           cmd = { "shopify", "theme", "language-server", "--stdio" },
           filetypes = { "liquid" },
         },
+        cssls = {
+          -- This forces the CSS LSP to initialize on liquid files
+          filetypes = { "css", "scss", "less", "liquid" },
+          settings = {
+            css = { validate = true },
+          },
+        },
       },
     },
   },
