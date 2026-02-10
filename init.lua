@@ -1,5 +1,6 @@
 require("joel.core.options")
 require("joel.core.keymaps")
+require("joel.config.autocmds")
 require("joel.lazy")
 vim.treesitter.language.register("liquid", "liquid")
-vim.lsp.enable('shopify_theme_ls')
+vim.lsp.enable("shopify_theme_ls")
